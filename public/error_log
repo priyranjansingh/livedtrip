@@ -1,0 +1,17 @@
+[24-Jan-2016 19:55:25 UTC] PHP Fatal error:  Class 'App\Models\Tour_Category' not found in /home/omgdemo/public_html/traveldesk/app/Http/Controllers/TourCategoriesController.php on line 14
+[24-Jan-2016 19:57:16 UTC] PHP Fatal error:  Class 'App\Models\Tour_Category' not found in /home/omgdemo/public_html/traveldesk/app/Http/Controllers/TourCategoriesController.php on line 14
+[26-Jan-2016 15:54:08 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Input' not found in /home/omgdemo/public_html/traveldesk/app/Http/Controllers/TourCategoriesController.php on line 47
+[10-Feb-2016 03:31:42 UTC] PHP Parse error:  syntax error, unexpected 'Route' (T_STRING) in /home/omgdemo/public_html/traveldesk/app/Http/routes.php on line 1
+[10-Feb-2016 03:32:08 UTC] PHP Parse error:  syntax error, unexpected 'Route' (T_STRING) in /home/omgdemo/public_html/traveldesk/app/Http/routes.php on line 1
+[10-Feb-2016 10:10:48 UTC] PHP Fatal error:  Call to a member function delete() on null in /home/omgdemo/public_html/traveldesk/app/Http/Controllers/HotelgalleryController.php on line 61
+[10-Feb-2016 10:10:49 UTC] PHP Fatal error:  Call to a member function delete() on null in /home/omgdemo/public_html/traveldesk/app/Http/Controllers/HotelgalleryController.php on line 61
+[10-Feb-2016 10:10:51 UTC] PHP Fatal error:  Call to a member function delete() on null in /home/omgdemo/public_html/traveldesk/app/Http/Controllers/HotelgalleryController.php on line 61
+[10-Feb-2016 10:10:53 UTC] PHP Fatal error:  Call to a member function delete() on null in /home/omgdemo/public_html/traveldesk/app/Http/Controllers/HotelgalleryController.php on line 61
+[10-Feb-2016 10:10:55 UTC] PHP Fatal error:  Call to a member function delete() on null in /home/omgdemo/public_html/traveldesk/app/Http/Controllers/HotelgalleryController.php on line 61
+[10-Feb-2016 10:10:56 UTC] PHP Fatal error:  Call to a member function delete() on null in /home/omgdemo/public_html/traveldesk/app/Http/Controllers/HotelgalleryController.php on line 61
+[10-Feb-2016 10:11:08 UTC] PHP Fatal error:  Call to a member function delete() on null in /home/omgdemo/public_html/traveldesk/app/Http/Controllers/HotelgalleryController.php on line 61
+[10-Feb-2016 10:11:09 UTC] PHP Fatal error:  Call to a member function delete() on null in /home/omgdemo/public_html/traveldesk/app/Http/Controllers/HotelgalleryController.php on line 61
+[21-Feb-2016 17:25:30 UTC] PHP Fatal error:  Call to undefined function App\Http\Controllers\pre() in /home/omgdemo/public_html/traveldesk/app/Http/Controllers/HomeController.php on line 52
+[21-Feb-2016 17:28:54 UTC] PHP Fatal error:  Call to undefined function App\Http\Controllers\pre() in /home/omgdemo/public_html/traveldesk/app/Http/Controllers/HomeController.php on line 52
+[21-Feb-2016 17:28:59 UTC] PHP Fatal error:  Call to undefined function App\Http\Controllers\pre() in /home/omgdemo/public_html/traveldesk/app/Http/Controllers/HomeController.php on line 52
+[22-Feb-2016 20:31:03 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home/omgdemo/public_html/traveldesk/storage/framework/views/58f3c8d311882c2187b07d996f81d240 on line 278

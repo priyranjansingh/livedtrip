@@ -1,0 +1,66 @@
+@media screen and (max-width:1200px) {
+	.wraper{ width:96%; margin:0 auto; padding:0;}
+	.section_1 ul{ margin:0;}
+	.h_top img{ width:auto;}
+}
+
+@media screen and (max-width:950px) {
+	.section_4 .h_table{ display:inherit;}
+	.brek_p{ display:block; line-height:0;}
+	.section_5 ol li{ width:50%;}
+	.footer .f_col{ width:33.33%;}
+	.footer_top .col-6.f_logo{ width:100%; text-align: center; margin-bottom:15px;}
+	.footer_top .col-2{width:45%; text-align:center;}
+	.footer_top .col-4{width:55%; text-align:center;}
+	/*.f_cart{ text-align:center;}*/
+	.section_3 .bg_pan{ min-height:250px;}
+}
+
+@media screen and (max-width:850px) {
+	.section_1 ul li{ width:49%; margin: 0.80645% 0.80645% 0.80645% 0}
+	.section_1 ul li:nth-of-type(3n+3){margin-right:0.80645%;}
+	.section_3 .bg_pan{ min-height:225px;}
+	.section_3 h4{ font-size:18px;}
+	.home_p .s_titel{font-size:24px;}
+}
+
+@media screen and (max-width:767px) {
+	.h_top .col-4, .h_top .col-8{float: none; width:100%;text-align:center;}
+	.h_top img{ width:auto; max-width:50%;}
+	
+	.home_baner{max-height:none; min-height:inherit;}
+	.home_baner .owl-stage-outer{ min-height: inherit;}
+	.home_baner .owl-stage-outer .item{ min-height:200px;}
+	.h_search{ position:static; margin:0 auto; width:100%; border-bottom:1px solid #ccc;}
+	.s_top{ display:block; text-align:center; background:none; color:#373737; padding:10px 10px 0; margin:0;}
+	.s_body{background:none; color:#373737; padding:10px;}
+	.fc_white{color:#373737;}
+	.section_3 .col-4{float: none; width:100%; margin-bottom:15px;}
+}
+@media screen and (max-width:599px) {
+	.scol-3{ width:100%; float:none; margin-bottom:10px;}	
+	.scol-1{width:100%; float:none; text-align:right;}
+	.h_search .btn_small{width:100%; text-align:center;}
+	/*.ad_search_pan {margin-top: -33px;}*/
+	.section_1 ul li{ width:100%; margin:0 0 0px;}
+	.section_2{ width:96%; margin:0 auto;}
+	.section_2 .l4, .section_2 .l3{width:100%; margin:0 0 0px;}
+	.section_4 .h_cell{ display:block;}
+	.section_5 ol li{ width:100%; float:none;}
+	.footer .f_col{width:100%; float:none; text-align:center;}
+	.footer_top .col-2, .footer_top .col-4, .f_logo span{width:100%; float:none; text-align:center;}
+	
+	.logo_p{ text-align:left;}
+	.logo_p img{ width:80%}
+	.top_menu{ display:none;}
+	.toggle_menu{ display:inline-block; cursor:pointer;}
+	.top_menu > li{ display:block; width:100%; line-height:100%; padding:5px 0;}
+	.top_menu > li > a{ font-size:16px;}
+	.top_menu li .t_menu{ position:static; display:none; margin:5px 0 15px;}
+	.top_menu li:hover .t_menu{display:none;}
+	.top_menu li:hover .dl-menuwrapper{display:none;}
+	.top_menu li .t_menu::before, .dl-menuwrapper::before{ display:none;}
+	.dl-menuwrapper{ position:static; display:none; margin:5px 0 15px;}
+	.dl-submenu{ position:static; display:block; margin:0px 0 15px;}
+	.r_arrow::after{content: "\f107";}
+}

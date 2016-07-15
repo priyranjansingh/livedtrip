@@ -1,0 +1,268 @@
+@extends('master')
+@section('content')
+
+<div class="box_p">
+    <div class="titel_bar clear">
+        <div class="p_titel">Edit:{!! $hotel->hotel_name !!}</div>
+
+    </div>
+    <div class="from_p">
+        @if (count($errors) > 0)
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
+        {!! Form::model($hotel,['method'=>'PATCH','action'=>['HotelsController@update',$hotel->id]]) !!}
+        <div class="row">
+            	<div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-md-4">Hotel Name:</label>
+                        <div class="col-md-8">
+                            {!! Form::text('hotel_name',null,['class'=>'tbox'])!!}
+                        </div>
+                    </div> 
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                                        <label class="col-md-4">Country:</label>
+                                        <div class="col-md-8">
+                                            {!! Form::select('country_id', $countries,'',['id'=>'country_id','class'=>"chosen-select-no-single"]) !!}
+                   
+                                        </div>
+                                        </div>
+                </div>               
+            </div>
+            <div class="row">    
+            <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-md-4">Hotel Address:</label>
+                        <div class="col-md-8">
+                            {!! Form::textarea('hotel_address',null,['class'=>'t_area'])!!}
+                        </div>
+                    </div> 
+                </div> 
+                
+                
+                <div class="col-md-6">
+                	<div class="form-group">
+                	<label class="col-md-4">State:</label>
+                    <div class="col-md-8">
+                    {!! Form::select('state_id', $states,'',['id'=>'state_id','class'=>"chosen-select-no-single"]) !!}                 
+                    </div>
+                    </div>                                        
+                </div>                
+            </div>
+            <div class="row">    
+                <div class="col-md-6">
+                    <div class="form-group">
+                    <label class="col-md-4">City:</label>
+                    <div class="col-md-8">
+                    {!! Form::select('city_id', $cities,'',['id'=>'city_id','class'=>"chosen-select-no-single"]) !!}                 
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-md-4">Location:</label>
+                        <div class="col-md-8">                                
+                        
+                                {!! Form::select('location_id', $locations,'',['id'=>'location_id','class'=>"chosen-select-no-single"]) !!}
+                           
+                        </div>
+                    </div>                                                      
+                </div>                
+            </div>            
+			<div class="row">
+            	<div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-md-4">Hotel Description:</label>
+                        <div class="col-md-8">
+                            {!! Form::textarea('hotel_description',null,['class'=>'t_area'])!!}
+							
+                        </div>
+                    </div> 
+                </div>
+            	<div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-md-4">Hotel Amenities:</label>
+                        <div class="col-md-8">
+                            {!! Form::textarea('hotel_amenities',null,['class'=>'t_area'])!!}
+							
+                        </div>
+                    </div> 
+                </div>
+             </div>  
+              
+             <div class="row">  
+                <div class="col-md-6">
+                	<div class="form-group">
+                	<label class="col-md-4">Latitude:</label>
+                    <div class="col-md-8">
+                        {!! Form::text('longitude',null,['class'=>'tbox'])!!}
+                    	
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                	<div class="form-group">
+                	<label class="col-md-4">Longitude:</label>
+                    <div class="col-md-8">
+                        {!! Form::text('latitude',null,['class'=>'tbox'])!!}
+                    	
+                    </div>
+                    </div>
+                </div>                
+            </div>
+             <div class="row">  
+                <div class="col-md-6">
+                	<div class="form-group">
+                	<label class="col-md-4">Star Rating:</label>
+                    <div class="col-md-8">
+                                        
+                        {!! Form::select('star_rating',array('1'=>'1 Star','2'=>'2 Star','3'=>'3 Star','4'=>'4 Star','5'=>'5 Star'),'',['class'=>"chosen-select-no-single"]) !!}                 
+                    	
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-md-4">Active:</label>
+                        <div class="col-md-8">
+                            <span class="rd_box">
+                                {!!Form::radio('active', 'Y')!!}
+                                
+                                <span></span>
+                                <label>Yes</label>
+                            </span> 
+                            <span class="rd_box">
+                                {!!Form::radio('active', 'N')!!}
+                                
+                                <span></span>
+                                <label>No</label>
+                            </span>                     
+                        </div>
+                    </div>
+                </div>                
+            </div>                    
+			<div class="row">
+            	<div class="col-md-6">
+                	<div class="form-group">
+                	<label class="col-md-4">Meta Title:</label>
+                    <div class="col-md-8">
+                      {!! Form::text('meta_title',null,['class'=>'tbox'])!!}
+                    </div>
+                    </div> 
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-md-4">Meta tag:</label>
+                        <div class="col-md-8">
+			{!! Form::textarea('metatag',null,['class'=>'t_area'])!!}
+                        </div>
+                    </div> 
+                </div>
+            </div>        
+            <div class="row">
+            	
+                <div class="col-md-6">
+                <div class="form-group">
+                	<label class="col-md-4">Meta description:</label>
+                    <div class="col-md-8">
+                    	{!! Form::textarea('meta_desc',null,['class'=>'t_area'])!!}
+                    </div>
+                </div>    
+                </div>
+            </div>
+            <div class="row">
+                @if($hotel->hotel_image!='')
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-md-4">Old Image:</label>
+                        <div class="col-md-8">                
+                            <input type='hidden' name='old_image' value="{{$hotel->hotel_image}}"/>
+                            <img src="{{url('/images/hotel_image/'. $hotel->hotel_image) }}" height="70" width="70" alt="No Image Available">
+                        </div>
+                    </div>  
+                    
+                </div>  
+                @endif
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-md-4">Upload New Image(Old image will be replace):</label>
+                        <div class="col-md-8">   
+                            <span class="file">
+                                {!! Form::file('hotel_image',['class'=>'upload']) !!}
+                            </span>
+       
+                        </div>
+                    </div>  
+                    
+                </div>  
+                
+            </div>   
+            <div class="row">
+            <div class="col-md-12 tar">
+                {!! Form::submit('Update Hotel Details',['class'=>'btn_small bg_blue'])!!}
+            </div>
+        </div>               
+        {!!  Form::close()  !!}
+
+    </div>
+            <script>
+        jQuery(".select").chosen();
+
+        $("#country_id").change(function() {
+            $(".loading").show();
+            var country_id = $("#country_id").val();
+            $.ajax({
+                method: "GET",
+                url: '<?php echo url('getHotelState/'); ?>/' + country_id,
+                success: function(data) {
+                    $("#state_id").html(data);
+                    $("#state_id").trigger("chosen:updated");
+                    $("#state_id").trigger('change');
+                    $("#city_id").trigger("chosen:updated");
+                }
+            });
+        });
+        
+        $("#state_id").change(function() {
+          
+            $(".loading").show();
+            var state_id = $("#state_id").val();
+            $.ajax({
+                method: "GET",
+                url: '<?php echo url('getHotelCity/'); ?>/' + state_id,
+                success: function(data) {
+                    $("#city_id").html(data);
+                    $("#city_id").trigger("chosen:updated");
+                    $("#city_id").trigger('change');
+                    $("#location_id").trigger("chosen:updated");
+                    
+                }
+            });
+        });
+        
+        $("#city_id").change(function() {
+            $(".loading").show();
+            var city_id = $("#city_id").val();
+            $.ajax({
+                method: "GET",
+                url: '<?php echo url('getHotelLocation/'); ?>/' + city_id,
+                success: function(data) {
+                    $("#location_id").html(data);
+                    $("#location_id").trigger("chosen:updated");
+                }
+            });
+        });
+        
+        
+        
+        
+    </script>
+</div>
+@stop

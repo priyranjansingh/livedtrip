@@ -1,0 +1,154 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "travel-font";
+  src:url("../fonts/travel-font.eot");
+  src:url("../fonts/travel-font.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/travel-font.woff") format("woff"),
+    url("../fonts/travel-font.ttf") format("truetype"),
+    url("../fonts/travel-font.svg#untitled-font-2") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "travel-font" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "travel-font" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-affordable:before {
+  content: "\61";
+}
+.icon-medical:before {
+  content: "\62";
+}
+.icon-bestseller:before {
+  content: "\63";
+}
+.icon-beach:before {
+  content: "\64";
+}
+.icon-winter:before {
+  content: "\65";
+}
+.icon-gtour:before {
+  content: "\66";
+}
+.icon-bargain:before {
+  content: "\67";
+}
+.icon-ctour:before {
+  content: "\68";
+}
+.icon-honeymoon:before {
+  content: "\69";
+}
+.icon-picturesque:before {
+  content: "\6a";
+}
+.icon-r-honeymoon:before {
+  content: "\6b";
+}
+.icon-family:before {
+  content: "\6c";
+}
+.icon-exotic:before {
+  content: "\6d";
+}
+.icon-summer:before {
+  content: "\6e";
+}
+.icon-corporate:before {
+  content: "\6f";
+}
+.icon-cultural:before {
+  content: "\70";
+}
+.icon-sightseeing:before {
+  content: "\71";
+}
+.icon-optional:before {
+  content: "\72";
+}
+.icon-shopping:before {
+  content: "\73";
+}
+.icon-f-stay:before {
+  content: "\74";
+}
+.icon-weekend:before {
+  content: "\75";
+}
+.icon-transfers:before {
+  content: "\76";
+}
+.icon-naturel:before {
+  content: "\77";
+}
+.icon-religious:before {
+  content: "\78";
+}
+.icon-insurance:before {
+  content: "\79";
+}
+.icon-t-custom:before {
+  content: "\7a";
+}
+.icon-t-fd:before {
+  content: "\41";
+}
+.icon-child:before {
+  content: "\42";
+}
+.icon-luxury:before {
+  content: "\43";
+}
+.icon-adventure:before {
+  content: "\45";
+}
+.icon-romantic:before {
+  content: "\46";
+}
+.icon-visa:before {
+  content: "\47";
+}
+.icon-fort:before {
+  content: "\48";
+}
+.icon-meals:before {
+  content: "\49";
+}
+.icon-hill:before {
+  content: "\4a";
+}
+.icon-wine:before {
+  content: "\4b";
+}
+.icon-independent:before {
+  content: "\4c";
+}
+.icon-flights:before {
+  content: "\4d";
+}

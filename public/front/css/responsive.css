@@ -1,0 +1,142 @@
+@media screen and (max-width:1200px) {
+	.wraper{ width:96%; margin:0 auto; padding:0;}
+	.section_1 ul{ margin:0;}
+	.h_top img{ width:auto;}
+	.r_hide{ display:none;}
+	.facility li{margin: 0 4px;}
+	.list_box{width: 98%; float:right;}
+	.t_bar{width: 98%; float:right;}
+	.box .l_tag li{ padding:10px;}
+	.p_itinerary .col-1{ width:13%;}
+	.p_itinerary .col-11{ width:87%;}
+	.book_p h4{ font-size:16px;}
+	.book_p strong{ display:inline-block; margin-top:10px;}
+	.day_p{ height:auto;}
+}
+
+@media screen and (max-width:950px) {
+	.section_4 .h_table{ display:inherit;}
+	.brek_p{ display:block; line-height:0;}
+	.section_5 ol li{ width:50%;}
+	.footer .f_col{ width:33.33%;}
+	.footer_top .col-6.f_logo{ width:100%; text-align: center; margin-bottom:15px;}
+	.footer_top .col-2{width:45%; text-align:center;}
+	.footer_top .col-4{width:55%; text-align:center;}
+	/*.f_cart{ text-align:center;}*/
+	.section_3 .bg_pan{ min-height:250px;}
+	.t_bar{ padding:9px 5px;}
+	.facility li{ margin: 0 2px; width: 17%;}
+	.l_box .btn_big{width: 70%;}
+	.l_pan.open_p .list_filter_ex{ padding:0 10px;}
+	.box .l_tag li {padding: 5px;}
+}
+
+@media screen and (max-width:850px) {
+	.section_1 ul li{ width:49%; margin: 0.80645% 0.80645% 0.80645% 0}
+	.section_1 ul li:nth-of-type(3n+3){margin-right:0.80645%;}
+	.section_3 .bg_pan{ min-height:225px;}
+	.section_3 h4{ font-size:18px;}
+	.home_p .s_titel{font-size:24px;}
+	.l_box .btn_big{ width:65%; font-size:15px;}
+	.view{ display:none;}
+	.t_bar .col-5{ padding:0;}
+	.t_bar .col-4{padding:0; width:36%;}
+	.t_bar .col-3{padding:0; width:22%;}
+	.t_bar .btn_small{padding: 7px 12px;}
+	.box .l_tag li{ white-space:nowrap; overflow:hidden; width:31%;}
+	.d_titel{ font-size:22px;}
+	.box{ padding:5px 0;}
+	.detail_p h5{ font-size:16px; margin:10px 0;}
+	.detail_p .pad15{ padding:10px; margin-right:5px}
+	.detail_p h3{font-size:16px;}
+}
+
+@media screen and (max-width:767px) {
+	.wraper{ width:94%;}
+	.h_top .col-4, .h_top .col-8{float: none; width:100%;text-align:center;}
+	.h_top img{ width:auto; max-width:50%;}
+	
+	.home_baner{max-height:none; min-height:inherit;}
+	.home_baner .owl-stage-outer{ min-height: inherit;}
+	.home_baner .owl-stage-outer .item{ min-height:200px;}
+	.h_search{ position:static; margin:0 auto; width:100%; border-bottom:1px solid #ccc;}
+	.s_top{ display:block; text-align:center; background:none; color:#373737; padding:10px 10px 0; margin:0;}
+	.s_body{background:none; color:#373737; padding:10px;}
+	/*.fc_white{color:#373737;}*/
+	.bg_white{ background:#f1f1f1;}
+	.section_3 .col-4{float: none; width:100%; margin-bottom:15px;}
+	.content_pan{ border-top:1px solid #ccc; padding:15px 0;}
+	.page-breadcrumb, .l_pan{ display:none;}
+	.list_box{ float:none; width:100%; border:none;}
+	.l_box.v_grid > li{ width:100%; float:none; margin:0 0 15px;}
+	.res_hide{ display:none;}
+	.floatmenu{ display:none;}
+	.res_cat{ display:block; margin-top:10px;}
+	.d_titel{ font-size:16px;}
+	.d_top .col-9{ width:100%; float:none;}
+	.d_top .col-13{ width:100%; float:none; padding:0 15px;}
+	.d_top .col-13 .sf{ float:left; margin-right:15px;}
+	.d_top .col-13 .h2{ float:left;}
+	.dt_menu ul li{ margin:0 15px;}
+	#photos .col-9{width:100%; float:none; margin-bottom:15px;}
+	#photos .col-3{width:100%; float:none; margin-bottom:15px;}
+	.p_itinerary .col-1{ display:none;}
+	.p_itinerary .col-11{width:100%; float:none; padding:0;}
+	.res_inc .col-5{width:100%; float:none; margin-bottom:15px;}
+	.res_inc .col-7{width:100%; float:none; margin-bottom:15px; padding:0 15px; border:none;}
+	.day_p .col-3{ width:30%;}
+	.day_p .col-9{ width:70%;}
+	
+	.s-menu li{ padding:0 5px;}
+	.inner_search_bar{}
+	.d_fixed .col-9{ width:100%;}
+	
+}
+@media screen and (max-width:599px) {
+	.scol-3{ width:100%; float:none; margin-bottom:10px;}	
+	.scol-1{width:100%; float:none; text-align:right;}
+	.h_search .btn_small{width:100%; text-align:center;}
+	/*.ad_search_pan {margin-top: -33px;}*/
+	.section_1 ul li{ width:100%; margin:0 0 0px;}
+	.section_2{ width:96%; margin:0 auto;}
+	.section_2 .l4, .section_2 .l3{width:100%; margin:0 0 0px;}
+	.section_4 .h_cell{ display:block;}
+	.section_5 ol li{ width:100%; float:none;}
+	.footer .f_col{width:100%; float:none; text-align:center;}
+	.footer_top .col-2, .footer_top .col-4, .f_logo span{width:100%; float:none; text-align:center;}
+	
+	.logo_p{ text-align:left;}
+	.logo_p img{ width:80%}
+	.top_menu{ display:none;}
+	.toggle_menu{ display:inline-block; cursor:pointer;}
+	.top_menu > li{ display:block; width:100%; line-height:100%; padding:5px 0;}
+	.top_menu > li > a{ font-size:16px;}
+	.top_menu li .t_menu{ position:static; display:none; margin:5px 0 15px;}
+	.top_menu li:hover .t_menu{display:none;}
+	.top_menu li:hover .dl-menuwrapper{display:none;}
+	.top_menu li .t_menu::before, .dl-menuwrapper::before{ display:none;}
+	.dl-menuwrapper{ position:static; display:none; margin:5px 0 15px;}
+	.dl-submenu{ position:static; display:block; margin:0px 0 15px;}
+	.r_arrow::after{content: "\f107";}
+	.dt_menu ul li{margin: 0 10px;}
+	.day_p .col-3{ width:40%;}
+	.day_p .col-9{ width:60%;}
+	.sight_list li{ margin:0; display:block;}
+	#inclusions .col-6{ width:100%; float:none;}
+	.sightt_ico::before{ width:20px; height:20px; line-height:20px; font-size:14px; padding:0;}
+	.sightt_ico{padding: 3% 0 0 25px; }
+	.hotel_ico::before{ width:20px; height:20px; line-height:20px; font-size:14px; padding:0;}
+	.hotel_ico{padding: 3% 0 0 25px; }	
+	.a_con h6{font-size:12px;}
+	.s-menu{ padding:0 15px;}
+	.s-menu li.ico_p{ display:none;}
+	.s-menu li{ width:32.33%;}
+	.s-menu li:last-child{ width:100%; margin-top:5px;}
+	.dt_menu ul{ text-align:center;}
+}
+@media screen and (min-width: 1201px) and (max-width:1236px) {
+        .facility li{margin: 0 4px;}
+}
+@media screen and (min-width: 951px) and (max-width:1124px) {
+        .facility li{width: 16%;}
+} 

@@ -1,0 +1,190 @@
+@extends('master')
+@section('content')
+
+<div class="box_p">
+      <div class="titel_bar clear">
+        <div class="p_titel">Create New Package</div>
+        
+      </div>
+      <div class="from_p">
+        	<div class="tac marb15"><h4>Package Information</h4></div>
+                       @if (count($errors) > 0)
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        @endif
+        	{!! Form::open(array('url' => 'package')) !!}
+			<div class="row">
+            	<div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-md-4">Package Title:</label>
+                        <div class="col-md-8">
+                           {!! Form::text('package_title',null,['class'=>'tbox'])!!}
+                        </div>
+                    </div> 
+                </div>
+            	<div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-md-4">Package Cost:</label>
+                        <div class="col-md-8">
+                           {!! Form::text('package_cost',null,['class'=>'tbox'])!!}
+                        </div>
+                    </div> 
+                </div>                
+            </div>
+            <div class="row">    
+                <div class="col-md-6">
+                    <div class="form-group">
+                                        <label class="col-md-4">Valid - From:</label>
+                                        <div class="col-md-8">
+					{!! Form::text('validfrom',null,['class'=>'tbox datepicker'])!!}                   
+                                        </div>
+                                        </div>
+                </div>
+                <div class="col-md-6">
+                	<div class="form-group">
+                	<label class="col-md-4">Valid - To:</label>
+                    <div class="col-md-8">
+                        {!! Form::text('validto',null,['class'=>'tbox datepicker'])!!}                   
+                    </div>
+                    </div>                                        
+                </div>                
+            </div>
+            <div class="row">    
+                <div class="col-md-6">
+                    <div class="form-group">
+                    <label class="col-md-4">Terms:</label>
+                    <div class="col-md-8">
+                       {!! Form::textarea('terms',null,['class'=>'t_area'])!!}               
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-md-4">Service policy:</label>
+                        <div class="col-md-8">                                
+                           {!! Form::textarea('service_policy',null,['class'=>'t_area'])!!}
+                        </div>
+                    </div>                                                      
+                </div>                
+            </div>            
+			<div class="row">
+            	<div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-md-4">Inclusions:</label>
+                        <div class="col-md-8">
+			{!! Form::textarea('inclusions',null,['class'=>'t_area'])!!}                   
+                        </div>
+                    </div> 
+                </div>
+            	<div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-md-4">Exclusions:</label>
+                        <div class="col-md-8">
+			{!! Form::textarea('exclusions',null,['class'=>'t_area'])!!}                    
+                        </div>
+                    </div> 
+                </div>
+             </div>  
+              
+             <div class="row">  
+                <div class="col-md-6">
+                	<div class="form-group">
+                	<label class="col-md-4">Package ordering:</label>
+                    <div class="col-md-8">
+                    	{!! Form::text('package_ordering',null,['class'=>'tbox'])!!}
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                	<div class="form-group">
+                	<label class="col-md-4">Last Date of booking:</label>
+                    <div class="col-md-8">
+                    	{!! Form::text('lastbooking_date',null,['class'=>'tbox datepicker'])!!}
+                    </div>
+                    </div>
+                </div>                
+            </div>
+             <div class="row">  
+                <div class="col-md-6">
+                	<div class="form-group">
+                	<label class="col-md-4">Promotional:</label>
+                    <div class="col-md-8">
+                            <span class="rd_box">
+                                {!!Form::radio('promotional', 'Y')!!}
+                                <span></span>
+                                <label>Yes</label>
+                            </span> 
+                            <span class="rd_box">
+                                {!!Form::radio('promotional', 'N')!!}
+                                <span></span>
+                                <label>No</label>
+                            </span>                     
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-md-4">Package tag:</label>
+                        <div class="col-md-8">
+                    	{!! Form::text('package_tag',null,['class'=>'tbox'])!!}
+                    </div>
+                    </div>
+                </div>                
+            </div>                    
+			<div class="row">
+            	<div class="col-md-6">
+                	<div class="form-group">
+                	<label class="col-md-4">Meta Title:</label>
+                    <div class="col-md-8">
+                        {!! Form::text('meta_title',null,['class'=>'tbox'])!!}
+                    </div>
+                    </div> 
+                </div>
+                <div class="col-md-6">
+                	<div class="form-group">
+                	<label class="col-md-4">Keywords:</label>
+                    <div class="col-md-8">
+                            {!! Form::text('keywords',null,['class'=>'tbox'])!!}                    
+                    </div>
+                    </div>
+                </div>
+            </div>        
+			<div class="row">
+            	<div class="col-md-6">
+                    <div class="form-group">
+                        <label class="col-md-4">Meta tag:</label>
+                        <div class="col-md-8">
+                            {!! Form::textarea('metatag',null,['class'=>'tbox'])!!}           
+                        </div>
+                    </div> 
+                </div>
+                <div class="col-md-6">
+                <div class="form-group">
+                	<label class="col-md-4">Meta description:</label>
+                    <div class="col-md-8">
+                    	{!! Form::textarea('meta_desc',null,['class'=>'tbox'])!!}  
+                    </div>
+                </div>    
+                </div>
+            </div>
+			<div class="row">
+            	<div class="col-md-12 tar">
+					<input type="submit" value="Continue" class="btn_small bg_blue st1_btn">
+                </div>
+            </div>                     
+        </form>       		
+      </div>
+  </div>
+<script language="javascript">
+    $(function () {
+                    $('.datepicker').datepicker()({
+                    dateFormat: 'YYYY-MM-DD'
+                });
+            })
+</script>
+@stop

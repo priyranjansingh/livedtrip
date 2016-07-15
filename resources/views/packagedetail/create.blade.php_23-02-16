@@ -1,0 +1,225 @@
+@extends('master')
+@section('content')
+<script src="{{ asset('ckeditor/ckeditor.js') }}" type="text/javascript"></script>
+<div class="box_p">
+    <div class="titel_bar clear">
+        <div class="p_titel">Package   Details</div>
+
+    </div>
+    <div class="res_table">
+        @if ($existing_packages)
+        <table width="100%" cellspacing="0" cellpadding="0" border="0" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>City Name</th>
+                    <th>State Name</th>
+                    <th>Country Name</th>
+                    <th>Location Name</th>
+                    <th class="tac">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($existing_packages as $existing_package)
+                <tr>
+                    <th>{{$existing_package->package_day}}</th>
+                    <th>{{$existing_package->city_name}}</th>
+                    <td>{{$existing_package->state_name}}</td>
+                    <td>{{$existing_package->country_name}}</td>
+                    <td>{{$existing_package->location_name}}</td>
+                    <td class="tac action">
+                        <a class="marr15" title="Edit" href="{{url('packagedetail',$existing_package->id)}}/edit">Edit</a>
+                        <!--<a class='delete_link' class="marr15" title="Delete" href="#"><i class="fa fa-trash"></i></a>-->
+                        <!-- TODO: Delete Button -->
+                        <!--{!! Form::open([
+                        'method' => 'DELETE',
+                        'class' => 'delete_class',
+                        'route' => ['packagedetail',$existing_package->id]
+                        ]) !!}
+                        {!! Form::close() !!}-->
+
+<!-- <a href="#" class="marr15" title="view" data-toggle="modal" data-target="#myModal"><i class="fa fa-eye"></i></a>
+<a href="#" title="Active"><i class="fa fa-check-circle fc_blue"></i></a>-->
+                    </td>                        
+                </tr> 
+                @endforeach
+            </tbody>
+        </table>
+        @endif
+    </div>
+
+
+
+    <div class="from_p">
+        @if (count($errors) > 0)
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+        @endif
+        {!! Form::open(array('url' => 'packagedetail', 'files'=>true)) !!}
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="col-md-4">Package Day:</label>
+                    <div class="col-md-8">
+                        {!! Form::text('package_day',count($existing_packages)+1,['class'=>'tbox','readonly' => 'true'])!!}
+                    </div>
+                </div> 
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="col-md-4">Country:</label>
+                    <div class="col-md-8">
+                        {!! Form::select('country_id', $country_arr,'',['id'=>'country_id','class'=>"chosen-select-no-single"]) !!}
+
+                    </div>
+                </div>
+            </div>
+            <!--<div class="col-md-6">
+                <div class="form-group">
+                    <label class="col-md-4">Night Stay:</label>
+                    <div class="col-md-8">
+                        {!! Form::text('night_stay',null,['class'=>'tbox'])!!}
+                    </div>
+                </div>
+            </div> -->              
+        </div>
+        <div class="row">    
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="col-md-4">State:</label>
+                    <div class="col-md-8">
+                        {!! Form::select('state_id', $states,'',['id'=>'state_id','class'=>"chosen-select-no-single"]) !!}                 
+                    </div>
+                </div>                                        
+            </div> 
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="col-md-4">City:</label>
+                    <div class="col-md-8">
+                        {!! Form::select('city_id', $cities,'',['id'=>'city_id','class'=>"chosen-select-no-single"]) !!}                 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">    
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="col-md-4">Location:</label>
+                    <div class="col-md-8">                                
+
+                        {!! Form::select('location_id', $locations,'',['id'=>'location_id','class'=>"chosen-select-no-single"]) !!}
+
+                    </div>
+                </div>                                                      
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="col-md-4">Hotel:</label>
+                    <div class="col-md-8">
+                        {!! Form::select('hotel_id', $hotel_arr,'',['id'=>'hotel_id','class'=>"chosen-select-no-single"]) !!}
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="col-md-2">Sightseeing:</label>
+                    <div class="col-md-10">
+                        {!! Form::textarea('sightseeing',null,['class'=>'t_area'])!!}
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label class="col-md-2">Meal:</label>
+                    <div class="col-md-10">
+                        {!! Form::textarea('meal',null,['class'=>'t_area','id'=>'meal'])!!}
+                    </div>
+                </div>
+            </div>
+        </div> 
+        
+
+        <div class="row">
+            <div class="col-md-12 tar">
+                {!! Form::hidden('package_id',$package_id)!!}
+                @if(count($existing_packages) < ($totalday->totalday) )
+                {!! Form::submit('Add More',['class'=>'btn_small bg_blue'])!!}
+                @endif
+                <a class="btn_small bg_blue" href="{{url('packagegallery/create',$package_id)}}">Next</a>
+            </div>
+        </div>  
+        {!!  Form::close()  !!}
+    </div>
+</div>
+<script>
+    jQuery(".select").chosen();
+    CKEDITOR.replace( 'meal', {
+    enterMode : CKEDITOR.ENTER_BR,
+        shiftEnterMode: CKEDITOR.ENTER_P
+    });
+    $("#country_id").change(function() {
+        $(".loading").show();
+        var country_id = $("#country_id").val();
+        $.ajax({
+            method: "GET",
+            url: '<?php echo url('getHotelState/'); ?>/' + country_id,
+            success: function(data) {
+                $("#state_id").html(data);
+                $("#state_id").trigger("chosen:updated");
+            }
+        });
+    });
+
+    $("#state_id").change(function() {
+
+        $(".loading").show();
+        var state_id = $("#state_id").val();
+        $.ajax({
+            method: "GET",
+            url: '<?php echo url('getHotelCity/'); ?>/' + state_id,
+            success: function(data) {
+                $("#city_id").html(data);
+                $("#city_id").trigger("chosen:updated");
+            }
+        });
+    });
+
+    $("#city_id").change(function() {
+        $(".loading").show();
+        var city_id = $("#city_id").val();
+        $.ajax({
+            method: "GET",
+            url: '<?php echo url('getHotelLocation/'); ?>/' + city_id,
+            success: function(data) {
+                $("#location_id").html(data);
+                $("#location_id").trigger("chosen:updated");
+            }
+        });
+    });
+    $("#location_id").change(function() {
+        $(".loading").show();
+        var location_id = $("#location_id").val();
+        $.ajax({
+            method: "GET",
+            url: '<?php echo url('getHotelName/'); ?>/' + location_id,
+            success: function(data) {
+                $("#hotel_id").html(data);
+                $("#hotel_id").trigger("chosen:updated");
+            }
+        });
+    });
+
+
+
+</script>
+
+@stop

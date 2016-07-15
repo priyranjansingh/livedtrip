@@ -1,0 +1,31 @@
+.thm {
+	display: inline-block;
+	position: relative;
+	content: " ";
+	vertical-align: middle;
+	background: transparent url("../images/holiday-theme.png") 0 0 no-repeat;
+	height: 40px;
+	width: 40px;
+	background-position: -280px -486px
+}
+.ico-gray-affordable {
+	background-position: -40px -406px;
+	height: 40px;
+	width: 40px
+}
+.ico-gray-art-culture {
+	background-position: -85px -734px;
+	height: 40px;
+	width: 40px
+}
+.ico-gray-bestseller {
+	background-position: -120px -406px;
+	height: 40px;
+	width: 40px
+}
+
+
+
+
+
+

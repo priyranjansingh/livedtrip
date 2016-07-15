@@ -1,0 +1,45 @@
+@extends('master')
+@section('content')
+<h1>Country</h1>
+
+<a href="country/create">Add Country</a>
+<table class="table">
+    <tbody>
+        <tr>
+            <th>
+                Title 
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>    
+        @foreach ($countries as $country)
+        <tr>
+            <td>
+                <a href="country/{{$country->id}}">{{$country->country_name}}</a>
+            </td>
+            <td>
+                {{$country->body}}
+            </td>
+            <td>
+                <a class="btn btn-info"  href="{{url('country',$country->id)}}">View</a>
+                <a class="btn btn-primary" href="{{url('country',$country->id)}}/edit">Edit</a>
+                <!-- TODO: Delete Button -->
+                {!! Form::open([
+                'method' => 'DELETE',
+                'route' => ['country',$country->id]
+                
+                ]) !!}
+                {!! Form::submit('Delete this task?', ['class' => 'btn btn-danger']) !!}
+                {!! Form::close() !!}
+            </td>
+        </tr>
+        @endforeach
+    </tbody>
+</table>
+
+@stop
+

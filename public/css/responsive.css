@@ -1,0 +1,17 @@
+@media screen and (max-width:1100px) {
+	.rd_box, .ck_box {margin-right: 10px;}	
+}
+
+@media screen and (max-width:800px) {
+	.search .t_box{width: 80%;}
+}
+
+@media screen and (max-width:767px) {
+	.h_top .col-6{ float:none; width:100%;}
+	.wel_p{ text-align:center;}
+	.footer{ text-align:center;}
+	
+	.c_left{float:none; width:100%; display:block;}
+	.c_right{float:none; width:100%; display:block;}
+	.side_menu {min-height:inherit;}
+}
